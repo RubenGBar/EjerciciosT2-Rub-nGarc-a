@@ -25,7 +25,7 @@ public class Ejercicio1 {
 			centena3cifras = numero / 100;
 			unidad = numero % 10;
 		} else if (numero <= 9999 && numero >= 1000) {
-			
+			System.out.println();
 		}
 		
 		sc.close();
