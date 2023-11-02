@@ -3,16 +3,15 @@ package EJERCICIOS_CONDICIONALES;
 import java.util.Scanner;
 
 /*
- * Valor introducido es = -646 | Resultado esperado: El valor introducido es errÃ³neo. | Resultado obtenido: El valor introducido es errÃ³neo. 
- * Valor introducido es = 8 | Resultado esperado: El nÃºmero es capicÃºa. | Resultado obtenido: El nÃºmero es capicÃºa. 
- * Valor introducido es = 15 | Resultado esperado: El nÃºmero no es capicÃºa. | Resultado obtenido: El nÃºmero no es capicÃºa. 
- * Valor introducido es = 22 | Resultado esperado: El nÃºmero es capicÃºa. | Resultado obtenido: El nÃºmero es capicÃºa. 
- * Valor introducido es = 345 | Resultado esperado: El nÃºmero no es capicÃºa. | Resultado obtenido: El nÃºmero no es capicÃºa. 
- * Valor introducido es = 969 | Resultado esperado: El nÃºmero es capicÃºa. | Resultado obtenido: El nÃºmero es capicÃºa. 
- * Valor introducido es = 1854 | Resultado esperado: El nÃºmero no es capicÃºa. | Resultado obtenido: El nÃºmero no es capicÃºa. 
- * Valor introducido es = 5775 | Resultado esperado: El nÃºmero es capicÃºa. | Resultado obtenido: El nÃºmero es capicÃºa.
- * Valor introducido es = 52156544 | Resultado esperado:  | Resultado obtenido: 
- * Valor introducido es =  | Resultado esperado: El valor introducido es errÃ³neo. | Resultado obtenido: El valor introducido es errÃ³neo.
+ * Valor introducido es = -646 | Resultado esperado: El valor introducido es erróneo. | Resultado obtenido: El valor introducido es erróneo. 
+ * Valor introducido es = 8 | Resultado esperado: El número es capicúa. | Resultado obtenido: El número es capicúa. 
+ * Valor introducido es = 15 | Resultado esperado: El número es capicúa. | Resultado obtenido: El número es capicúa. 
+ * Valor introducido es = 22 | Resultado esperado: El número es capicúa. | Resultado obtenido: El número es capicúa. 
+ * Valor introducido es = 345 | Resultado esperado: El número es capicúa. | Resultado obtenido: El número es capicúa. 
+ * Valor introducido es = 969 | Resultado esperado: El número es capicúa. | Resultado obtenido: El número es capicúa. 
+ * Valor introducido es = 1854 | Resultado esperado: El número es capicúa. | Resultado obtenido: El número es capicúa. 
+ * Valor introducido es = 5775 | Resultado esperado: El número es capicúa. | Resultado obtenido: El número es capicúa.
+ * Valor introducido es = 52156544 | Resultado esperado: El valor introducido es erróneo. | Resultado obtenido: El valor introducido es erróneo.
  * */
 
 public class Ejercicio1 {
