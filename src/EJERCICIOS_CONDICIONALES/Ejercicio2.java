@@ -20,13 +20,15 @@ public class Ejercicio2 {
 		
 		int numeroDNI = 0, letra;
 		
+		boolean repetir = false;
+		
 		char NIF = 'a';
 		
 		Scanner sc = new Scanner(System.in);
 		
 		do {
 			
-		System.out.println("Introduzca el número de 8 cifras de su DNI sin la letra por favor: ");
+		System.out.println("Introduzca el numero de 8 cifras de su DNI sin la letra por favor: ");
 		
 		try {
 			
@@ -37,7 +39,14 @@ public class Ejercicio2 {
 			System.out.println("Eror, ha introducido la letra de su DNI");
 			
 		}
-		} while(numeroDNI < 100000000);
+		
+		if (numeroDNI < 100000000 || numeroDNI > 0) {
+			
+			repetir = true;
+			
+		}
+		
+		} while(repetir);
 		
 		letra = numeroDNI % 23;
 		
