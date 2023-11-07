@@ -23,6 +23,8 @@ public class Ejercicio2 {
 		
 		Scanner sc = new Scanner(System.in);
 		
+		
+		
 		do {
 			
 		System.out.println("Introduzca el número de 8 cifras de su DNI sin la letra por favor: ");
@@ -47,7 +49,10 @@ public class Ejercicio2 {
 		
 		} while(numeroDNI > 99999999 || numeroDNI < 9999999);
 		
+		
+		
 		letra = numeroDNI % 23;
+		
 		
 		
 		switch (letra) {
@@ -100,7 +105,9 @@ public class Ejercicio2 {
 		
 		}
 		
+		
 		System.out.print("La letra de su DNI es: " + NIF);
+		
 		
 		sc.close();
 	}
