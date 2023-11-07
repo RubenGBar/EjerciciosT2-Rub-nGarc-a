@@ -33,8 +33,9 @@ public class Ejercicio2 {
 		
 		} catch (InputMismatchException e) {
 			
+			numeroDNI = 10000000;
 			System.out.println("Eror, ha introducido la letra de su DNI");
-			System.exit(0);
+			System.out.println("Se introducirá el número " + numeroDNI + " por defecto");
 			
 		}
 		
