@@ -24,9 +24,9 @@ public class Ejercicio7 {
 			
 			horas = sc.nextInt();
 			
-			if (horas < 0 || horas >= 24) System.out.println("Has introducido un valor erroneo. Vuelva a introducirlo");
+			if (horas < 0 || horas > 24) System.out.println("Has introducido un valor erroneo. Vuelva a introducirlo");
 			
-		}while (horas < 0 || horas >= 24);
+		}while (horas < 0 || horas > 24);
 		
 		
 		
@@ -36,9 +36,9 @@ public class Ejercicio7 {
 			
 			minutos = sc.nextInt();
 			
-			if (minutos < 0 || minutos >= 60) System.out.println("Has introducido un valor erroneo. Vuelva a introducirlo");
+			if (minutos < 0 || minutos > 60) System.out.println("Has introducido un valor erroneo. Vuelva a introducirlo");
 			
-		}while (minutos < 0 || minutos >= 60);
+		}while (minutos < 0 || minutos > 60);
 		
 		
 		
@@ -48,13 +48,14 @@ public class Ejercicio7 {
 			
 			segundos = sc.nextInt();
 			
-			if (segundos < 0 || segundos >= 60) System.out.println("Has introducido un valor erroneo. Vuelva a introducirlo");
+			if (segundos < 0 || segundos > 60) System.out.println("Has introducido un valor erroneo. Vuelva a introducirlo");
 			
-		}while (segundos < 0 || segundos >= 60);
+		}while (segundos < 0 || segundos > 60);
 		
 		
 		
-		if (segundos == 59) {
+		
+		if (segundos == 60) {
 			
 			segundos = 0;
 			
@@ -66,13 +67,101 @@ public class Ejercicio7 {
 				
 				minutos = 0;
 				
+				if (horas == 24) {
+					
+					horas = 0;
+					
+				}else if (horas == 25) {
+					
+					horas = 1;
+					
+				}
+			} else if (minutos == 61) {
+				
+				horas += 1;
+				
+				minutos = 1;
+				
+				if (horas == 24) {
+					
+				horas = 0;
+					
+				}else if (horas == 25) {
+					
+				horas = 1;
+					
+				}
+				
 			}
 			
-		} else {
+		}else if (segundos == 59) {
+			
+			segundos = 0;
+			
+			minutos += 1;
+			
+			if (minutos == 60 ) {
+				
+				horas += 1;
+				
+				minutos = 0;
+				
+				if (horas == 24) {
+					
+					horas = 0;
+					
+				}else if (horas == 25) {
+					
+					horas = 1;
+					
+				}
+			} else if (minutos == 61) {
+				
+				horas += 1;
+				
+				minutos = 1;
+				
+				if (horas == 24) {
+					
+				horas = 0;
+					
+				}else if (horas == 25) {
+					
+				horas = 1;
+					
+				}
+				
+			}
+			
+		}else if (segundos < 59){
 			
 			segundos += 1;
 			
 		}
+		
+		
+		
+		if (minutos == 60){
+			
+			horas += 1;
+			
+			minutos = 0;
+			
+			if (horas == 24) {
+				
+				horas = 0;
+					
+			}else if (horas == 25) {
+					
+				horas = 1;
+					
+			}
+			
+		}
+		
+		
+		
+		if (horas == 24) horas = 24;
 		
 		System.out.println("El tiempo introducido tras 1 segundo es de: " + horas + " : " + minutos + " : " + segundos);
 		
