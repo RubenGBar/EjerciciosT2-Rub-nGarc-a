@@ -10,8 +10,9 @@ import java.util.Scanner;
  * Valor introducido es = 77816487 | Resultado esperado: N | Resultado obtenido: N
  * Valor introducido es = 123456789 | Resultado esperado:  | Resultado obtenido: 
  * Valor introducido es = -4 | Resultado esperado: Introduzca un numero de 8 cifras | Resultado obtenido: Introduzca un numero de 8 cifras
- * Valor introducido es = a | Resultado esperado: Introduzca un numero de 8 cifras | Resultado obtenido: Introduzca un numero de 8 cifras
- * Valor introducido es =  | Resultado esperado: Eror, ha introducido la letra de su DNI | Resultado obtenido: Eror, ha introducido la letra de su DNI
+ * Valor introducido es = d | Resultado esperado: Eror, ha introducido la letra de su DNI y | Resultado obtenido: Eror, ha introducido la letra de su DNI
+ *                          | Se introducirá el número 10000000 por defecto                 | Se introducirá el número 10000000 por defecto  
+ *                          | La letra de su DNI es: Z                                      | La letra de su DNI es: Z 
  * */
 
 public class Ejercicio2 {
@@ -35,8 +36,9 @@ public class Ejercicio2 {
 				
 			} catch (InputMismatchException e) {
 				
-				System.out.println("Error, ha introducido la letra de su DNI");
-				System.exit(0);
+				numeroDNI = 10000000;
+				System.out.println("Eror, ha introducido la letra de su DNI");
+				System.out.println("Se introducirá el número " + numeroDNI + " por defecto");
 				
 			}
 			
@@ -48,26 +50,7 @@ public class Ejercicio2 {
 			
 		} while (numeroDNI > 99999999 || numeroDNI < 9999999);
 		
-		try {
-			
-			numeroDNI = sc.nextInt();
-		
-		} catch (InputMismatchException e) {
-			
-			numeroDNI = 10000000;
-			System.out.println("Eror, ha introducido la letra de su DNI");
-			System.out.println("Se introducirá el número " + numeroDNI + " por defecto");
-			
-		}
-		
-		if (numeroDNI > 99999999 || numeroDNI < 9999999) {
-			
-			System.out.println("Introduzca un numero de 8 cifras");
-			
-		}
-		
-		//} while(numeroDNI > 99999999 || numeroDNI < 9999999);
-		
+	
 		
 		
 		letra = numeroDNI % 23;

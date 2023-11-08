@@ -44,9 +44,10 @@ public class Ejercicio6 {
 			System.out.println("Se introducira " + respuestaSuma + " como el valor de tu respuesta");
 		}
 		
+		
+		
+		
 		sumaRandoms = suma1 + suma2;
-		
-		
 		
 		
 		if (respuestaSuma == sumaRandoms) {

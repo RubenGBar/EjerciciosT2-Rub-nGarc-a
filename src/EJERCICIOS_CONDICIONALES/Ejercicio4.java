@@ -3,21 +3,17 @@ package EJERCICIOS_CONDICIONALES;
 import java.util.Scanner;
 
 /*
- * Valor introducido es =  | Resultado esperado:  | Resultado obtenido: 
- * Valor introducido es =  | Resultado esperado:  | Resultado obtenido:  
- * Valor introducido es =  | Resultado esperado:  | Resultado obtenido:  
- * Valor introducido es =  | Resultado esperado:  | Resultado obtenido: 
- * Valor introducido es =  | Resultado esperado:  | Resultado obtenido: 
- * Valor introducido es =  | Resultado esperado:  | Resultado obtenido: 
- * Valor introducido es =  | Resultado esperado:  | Resultado obtenido: 
- * Valor introducido es =  | Resultado esperado:  | Resultado obtenido: 
- * Valor introducido es =  | Resultado esperado:  | Resultado obtenido: 
+ * Valor introducido es = 89 | Resultado esperado: El numero en letra es: Ochenta y nueve | Resultado obtenido: El numero en letra es: Ochenta y nueve
+ * Valor introducido es = 100 | Resultado esperado: El valor introducido es incorrecto | Resultado obtenido: El valor introducido es incorrecto 
+ * Valor introducido es = -1 | Resultado esperado: El valor introducido es incorrecto | Resultado obtenido: El valor introducido es incorrecto 
+ * Valor introducido es = 5 | Resultado esperado: El numero en letras es: cinco | Resultado obtenido: El numero en letras es: cinco
+ * Valor introducido es = 26 | Resultado esperado: El numero en letras es: Veintiseis | Resultado obtenido: El numero en letras es: Veintiseis
  * */
 
 public class Ejercicio4 {
 	public static void main(String[] args) {
 		
-		int numero, unidad, decena;
+		int numero, unidad = 0, decena;
 		
 		String decenaLetra = "", concreto = "", unidadLetra = "";
 		
@@ -36,7 +32,17 @@ public class Ejercicio4 {
 		} while (numero < 0 || numero > 99);
 		
 		
-		unidad = numero%10;
+		
+		
+		if (numero > 29) {
+		
+			unidad = numero%10;
+			
+		} else {
+			
+			unidad = numero;
+			
+		}
 		
 		decena = numero/10;
 		
@@ -44,25 +50,25 @@ public class Ejercicio4 {
 		
 		switch (unidad) {
 		
-		case 0 -> unidadLetra = " cero";
+		case 0 -> unidadLetra = "cero";
 		
-		case 1 -> unidadLetra = " uno";
+		case 1 -> unidadLetra = "uno";
 		
-		case 2 -> unidadLetra = " dos";
+		case 2 -> unidadLetra = "dos";
 		
-		case 3 -> unidadLetra = " tres";
+		case 3 -> unidadLetra = "tres";
 		
-		case 4 -> unidadLetra = " cuatro";
+		case 4 -> unidadLetra = "cuatro";
 		
-		case 5 -> unidadLetra = " cinco";
+		case 5 -> unidadLetra = "cinco";
 		
-		case 6 -> unidadLetra = " seis";
+		case 6 -> unidadLetra = "seis";
 		
-		case 7 -> unidadLetra = " siete";
+		case 7 -> unidadLetra = "siete";
 		
-		case 8 -> unidadLetra = " ocho";
+		case 8 -> unidadLetra = "ocho";
 		
-		case 9 -> unidadLetra = " nueve";
+		case 9 -> unidadLetra = "nueve";
 		
 		}
 		
@@ -145,9 +151,12 @@ public class Ejercicio4 {
 		}
 		
 		if (numero >= 0 && numero <= 9) {
-			System.out.println("El número en letras es: " + unidadLetra);
-		}else if (numero >= 10 && numero <= 99) {
-			
+			System.out.println("El numero en letras es: " + unidadLetra);
+		}else if (numero >= 10 && numero <= 29 || numero == 20 || numero == 30 || numero == 40 
+				|| numero == 50 || numero == 60 || numero == 70 || numero == 80 || numero == 90) {
+			System.out.println("El numero en letras es: " + concreto);
+		} else if (numero >= 30 && numero <= 99) {
+			System.out.println("El numero en letra es: "  + decenaLetra + unidadLetra);
 		}
 		
 		sc.close();
