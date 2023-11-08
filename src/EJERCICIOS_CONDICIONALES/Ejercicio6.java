@@ -49,7 +49,6 @@ public class Ejercicio6 {
 		
 		sumaRandoms = suma1 + suma2;
 		
-		
 		if (respuestaSuma == sumaRandoms) {
 			
 			System.out.println("Bien!! Acertaste.");

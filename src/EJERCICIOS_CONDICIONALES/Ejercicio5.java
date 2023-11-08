@@ -3,19 +3,6 @@ package EJERCICIOS_CONDICIONALES;
 import java.util.Scanner;
 
 /*
- * Valor introducido es =  | Resultado esperado:  | Resultado obtenido: 
- * Valor introducido es =  | Resultado esperado:  | Resultado obtenido:  
- * Valor introducido es =  | Resultado esperado:  | Resultado obtenido:  
- * Valor introducido es =  | Resultado esperado:  | Resultado obtenido: 
- * Valor introducido es =  | Resultado esperado:  | Resultado obtenido: 
- * Valor introducido es =  | Resultado esperado:  | Resultado obtenido: 
- * Valor introducido es =  | Resultado esperado:  | Resultado obtenido: 
- * Valor introducido es =  | Resultado esperado:  | Resultado obtenido: 
- * Valor introducido es =  | Resultado esperado:  | Resultado obtenido: 
- * */
-
-
-/*
  * Valor introducido es = -1500 | Resultado esperado: 1500 | Resultado obtenido: 1500
  * Valor introducido es = -9 | Resultado esperado: 9 | Resultado obtenido: 9 
  * Valor introducido es = 8 | Resultado esperado: 8 | Resultado obtenido: 8 
