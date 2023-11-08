@@ -27,7 +27,26 @@ public class Ejercicio2 {
 		
 		do {
 			
-		System.out.println("Introduzca el número de 8 cifras de su DNI sin la letra por favor: ");
+			System.out.println("Introduzca el numero de 8 cifras de su DNI sin la letra por favor: ");
+			
+			try {
+				
+				numeroDNI = sc.nextInt();
+				
+			} catch (InputMismatchException e) {
+				
+				System.out.println("Error, ha introducido la letra de su DNI");
+				System.exit(0);
+				
+			}
+			
+			if (numeroDNI > 99999999 || numeroDNI < 9999999) {
+				
+				System.out.println("Introduzca un numero de 8 cifras");
+				
+			}
+			
+		} while (numeroDNI > 99999999 || numeroDNI < 9999999);
 		
 		try {
 			
@@ -47,7 +66,7 @@ public class Ejercicio2 {
 			
 		}
 		
-		} while(numeroDNI > 99999999 || numeroDNI < 9999999);
+		//} while(numeroDNI > 99999999 || numeroDNI < 9999999);
 		
 		
 		
