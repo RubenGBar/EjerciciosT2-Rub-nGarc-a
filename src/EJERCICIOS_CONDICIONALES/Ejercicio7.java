@@ -141,6 +141,8 @@ public class Ejercicio7 {
 		
 		
 		
+		
+		
 		if (minutos == 60){
 			
 			horas += 1;
