@@ -3,17 +3,14 @@ package EJERCICIOS_BUCLES;
 import java.util.Scanner;
 
 /*
- * Valor introducido es =  | Resultado esperado:  | Resultado obtenido: 
- * Valor introducido es =  | Resultado esperado:  | Resultado obtenido: 
- * Valor introducido es =  | Resultado esperado:  | Resultado obtenido: 
- * Valor introducido es =  | Resultado esperado:  | Resultado obtenido:
- * Valor introducido es =  | Resultado esperado:  | Resultado obtenido: 
- * Valor introducido es =  | Resultado esperado:  | Resultado obtenido: 
- * Valor introducido es =  | Resultado esperado:  | Resultado obtenido: 
- * Valor introducido es =  | Resultado esperado:  | Resultado obtenido: 
- * Valor introducido es =  | Resultado esperado:  | Resultado obtenido: 
- * Valor introducido es =  | Resultado esperado:  | Resultado obtenido: 
- * Valor introducido es =  | Resultado esperado:  | Resultado obtenido: 
+ * Valor introducido es = 23, 59, 50 y 12 | Resultado esperado: El tiempo introducido tras 12 segundo es de: 0 : 0 : 2 | Resultado obtenido: El tiempo introducido tras 12 segundo es de: 0 : 0 : 2
+ * Valor introducido es = 0 y -8 | Resultado esperado: Has introducido un valor erroneo. Vuelva a introducirlo | Resultado obtenido: Has introducido un valor erroneo. Vuelva a introducirlo
+ * Valor introducido es = 25 | Resultado esperado: Has introducido un valor erroneo. Vuelva a introducirlo | Resultado obtenido: Has introducido un valor erroneo. Vuelva a introducirlo
+ * Valor introducido es = 20 y 82 | Resultado esperado: Has introducido un valor erroneo. Vuelva a introducirlo | Resultado obtenido: Has introducido un valor erroneo. Vuelva a introducirlo
+ * Valor introducido es = 20, 20 y -9 | Resultado esperado: Has introducido un valor erroneo. Vuelva a introducirlo | Resultado obtenido: Has introducido un valor erroneo. Vuelva a introducirlo
+ * Valor introducido es = 20, 20 y 80 | Resultado esperado: Has introducido un valor erroneo. Vuelva a introducirlo | Resultado obtenido: Has introducido un valor erroneo. Vuelva a introducirlo
+ * Valor introducido es = 20, 20, 20 y -9 | Resultado esperado: Has introducido un valor erroneo. Vuelva a introducirlo | Resultado obtenido: Has introducido un valor erroneo. Vuelva a introducirlo
+ * Valor introducido es = 25 | Resultado esperado: Has introducido un valor erroneo. Vuelva a introducirlo | Resultado obtenido: Has introducido un valor erroneo. Vuelva a introducirlo
  * */
 
 public class Ejercicio1 {
@@ -31,9 +28,9 @@ public class Ejercicio1 {
 			
 			horas = sc.nextInt();
 			
-			if (horas < 0 || horas > 23) System.out.println("Has introducido un valor erroneo. Vuelva a introducirlo");
+			if (horas < 0 || horas > 24) System.out.println("Has introducido un valor erroneo. Vuelva a introducirlo");
 			
-		}while (horas < 0 || horas > 23);
+		}while (horas < 0 || horas > 24);
 		
 		
 		
@@ -43,9 +40,9 @@ public class Ejercicio1 {
 			
 			minutos = sc.nextInt();
 			
-			if (minutos < 0 || minutos > 59) System.out.println("Has introducido un valor erroneo. Vuelva a introducirlo");
+			if (minutos < 0 || minutos > 60) System.out.println("Has introducido un valor erroneo. Vuelva a introducirlo");
 			
-		}while (minutos < 0 || minutos > 59);
+		}while (minutos < 0 || minutos > 60);
 		
 		
 		
@@ -55,9 +52,9 @@ public class Ejercicio1 {
 			
 			segundos = sc.nextInt();
 			
-			if (segundos < 0 || segundos > 59) System.out.println("Has introducido un valor erroneo. Vuelva a introducirlo");
+			if (segundos < 0 || segundos > 60) System.out.println("Has introducido un valor erroneo. Vuelva a introducirlo");
 			
-		}while (segundos < 0 || segundos > 59);
+		}while (segundos < 0 || segundos > 60);
 		
 		
 		
@@ -67,148 +64,125 @@ public class Ejercicio1 {
 		
 		incremento = sc.nextInt();
 		
-		if (incremento < 0 || incremento > 60) System.out.println("Has introducido un valor erroneo. Vuelva a introducirlo");
+		if (incremento < 0) System.out.println("Has introducido un valor erroneo. Vuelva a introducirlo");
 		
-		}while (incremento < 0 || incremento > 60);
+		}while (incremento < 0);
 		
 		
 		
-		sumaSegundos = segundos + incremento;
-		
-		if (sumaSegundos < 119 && sumaSegundos > 60) {
+		for (int i = 0; i < incremento; i++) {
 			
-			segundos = sumaSegundos - 60;
-			
-			minutos +=2;
-			
-			if (minutos == 62) {
+			if (segundos == 60) {
 				
-				minutos = 2;
+				segundos = 0;
 				
-				horas += 1;
+				minutos += 1;
 				
-				if (horas == 24) {
+				if (minutos == 60) {
 					
+					horas += 1;
+					
+					minutos = 0;
+					
+					if (horas == 24) {
+						
+						horas = 0;
+						
+					}else if (horas == 25) {
+						
+						horas = 1;
+						
+					}
+				} else if (minutos == 61) {
+					
+					horas += 1;
+					
+					minutos = 1;
+					
+					if (horas == 24) {
+						
 					horas = 0;
+						
+					}else if (horas == 25) {
+						
+					horas = 1;
+						
+					}
 					
 				}
 				
-			} else if (minutos == 61) {
+			}else if (segundos == 59) {
 				
-			minutos = 1;
-			
-			horas += 1;
-			
-			if (horas == 24) {
+				segundos = 0;
 				
-				horas = 0;
+				minutos += 1;
+				
+				if (minutos == 60 ) {
+					
+					horas += 1;
+					
+					minutos = 0;
+					
+					if (horas == 24) {
+						
+						horas = 0;
+						
+					}else if (horas == 25) {
+						
+						horas = 1;
+						
+					}
+				} else if (minutos == 61) {
+					
+					horas += 1;
+					
+					minutos = 1;
+					
+					if (horas == 24) {
+						
+					horas = 0;
+						
+					}else if (horas == 25) {
+						
+					horas = 1;
+						
+					}
+					
+				}
+				
+			}else if (segundos < 59){
+				
+				segundos += 1;
 				
 			}
+			
+			
+			
+			
+			
+			if (minutos == 60){
 				
-			}else if (minutos == 60) {
+				horas += 1;
 				
 				minutos = 0;
 				
-				horas += 1;
-				
 				if (horas == 24) {
 					
 					horas = 0;
-					
+						
+				}else if (horas == 25) {
+						
+					horas = 1;
+						
 				}
 				
 			}
 			
-		}else if (sumaSegundos == 60) {
 			
-			segundos = 0;
 			
-			minutos +=2;
-			
-			if (minutos == 62) {
-				
-				minutos = 2;
-				
-				horas += 1;
-				
-				if (horas == 24) {
-					
-					horas = 0;
-					
-				}
-				
-			} else if (minutos == 61) {
-				
-			minutos = 1;
-			
-			horas += 1;
-			
-			if (horas == 24) {
-				
-				horas = 0;
-				
-			}
-				
-			}else if (minutos == 60) {
-				
-				minutos = 0;
-				
-				horas += 1;
-				
-				if (horas == 24) {
-					
-					horas = 0;
-					
-				}
-				
-			}
-			
-		}else if (sumaSegundos < 60) {
-		
-			segundos = sumaSegundos - 60;
-			
-			minutos +=2;
-			
-			if (minutos == 62) {
-				
-				minutos = 2;
-				
-				horas += 1;
-				
-				if (horas == 24) {
-					
-					horas = 0;
-					
-				}
-				
-			} else if (minutos == 61) {
-				
-			minutos = 1;
-			
-			horas += 1;
-			
-			if (horas == 24) {
-				
-				horas = 0;
-				
-			}
-				
-			}else if (minutos == 60) {
-				
-				minutos = 0;
-				
-				horas += 1;
-				
-				if (horas == 24) {
-					
-					horas = 0;
-					
-				}
-				
-			}
+			if (horas == 24) horas = 0;
 			
 		}
-		
 		
 		System.out.println("El tiempo introducido tras " + incremento + " segundo es de: " + horas + " : " + minutos + " : " + segundos);
 		

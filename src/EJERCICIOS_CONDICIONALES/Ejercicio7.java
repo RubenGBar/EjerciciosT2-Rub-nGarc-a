@@ -163,7 +163,7 @@ public class Ejercicio7 {
 		
 		
 		
-		if (horas == 24) horas = 24;
+		if (horas == 24) horas = 0;
 		
 		System.out.println("El tiempo introducido tras 1 segundo es de: " + horas + " : " + minutos + " : " + segundos);
 		

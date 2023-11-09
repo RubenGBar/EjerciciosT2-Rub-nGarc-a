@@ -53,8 +53,9 @@ public class Ejercicio8 {
 			descuento = ( (precio * 30) / 100);
 			
 			System.out.println("El precio original de su billete es de: " + (int)precio + " €");
-			System.out.println("Por tener una estancia igual o superior a 7 dias y una estancia igual o superior a 800 kilometros, se le aplicara un descuento del 30%."
-					+ " El cual es de: " + (int)descuento);
+			System.out.println("Por tener una estancia igual o superior a 7 dias y una estancia igual o superior a 800 kilometros, "
+					+ "\nse le aplicara un descuento del 30%."
+					+ " El cual es de: " + (int)descuento + " €");
 			
 			System.out.println("Por lo que el precio con el descuento es de: " + (int)(precio - descuento) + " €");
 			
