@@ -5,12 +5,12 @@ import java.util.Scanner;
 
 /*
  * Valor introducido | Resultado esperado | Resultado obtenido 
- *  				 |  				  | 		
- * 				     |  				  |  		
- *   				 | 					  | 		
- *  				 |   		 		  |  		
- *   				 |   				  |  		
- *   				 |   				  |  		
+ *  		4		 |  	     *        |        *
+ *					 |			* *       |		  * *
+ *					 |		   * * *      |      * * *
+ *					 |		  * * * * 	  |     * * * *  		
+ * 			-1	     | Valor erroneo 	  | Valor erroneo 		
+ *   		a		 | 1				  | *		
  * */
 
 public class Ejercicio3 {
@@ -22,7 +22,7 @@ public class Ejercicio3 {
 		
 		do {
 			
-			System.out.println("Introduzca un numero positivo: ");
+			System.out.println("Introduzca un numero positivo, para crear una pirámide de esta altura y base: ");
 			
 			try {
 
@@ -40,16 +40,25 @@ public class Ejercicio3 {
 			
 		} while (numero < 1);
 		
-		for (int i = 0; i <= numero; i++) {
-			
-			
-			for (int j = 1; j <= i; j++) {
-				
-				System.out.print("*");
-				System.out.print("");
-			}
-			System.out.println("");
-		}
+		
+		
+		System.out.println();
+		
+		for (int i = 1; i <= numero; i++) {
+            
+			//Imprimo los espacios en blanco
+            for (int j = 1; j <= numero - i; j++) {
+                System.out.print(" ");
+            }
+
+            //Imprimo los asteristicos asteriscos
+            for (int k = 1; k <= i; k++) {
+                System.out.print("* ");
+            }
+
+            //Voy a la siguiente linea despues de imprimir cada fila
+            System.out.println();
+        }
 		
 		sc.close();
 		
