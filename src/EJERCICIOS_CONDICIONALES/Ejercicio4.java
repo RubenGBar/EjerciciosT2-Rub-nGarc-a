@@ -23,7 +23,7 @@ public class Ejercicio4 {
 		
 		do {
 		
-		System.out.println("Introduzca un número: ");
+		System.out.println("Introduzca un numero: ");
 		
 		numero = sc.nextInt();
 		
@@ -50,25 +50,25 @@ public class Ejercicio4 {
 		
 		switch (unidad) {
 		
-		case 0 -> unidadLetra = "cero";
+		case 0 -> unidadLetra = "Cero";
 		
-		case 1 -> unidadLetra = "uno";
+		case 1 -> unidadLetra = "Uno";
 		
-		case 2 -> unidadLetra = "dos";
+		case 2 -> unidadLetra = "Dos";
 		
-		case 3 -> unidadLetra = "tres";
+		case 3 -> unidadLetra = "Tres";
 		
-		case 4 -> unidadLetra = "cuatro";
+		case 4 -> unidadLetra = "Cuatro";
 		
-		case 5 -> unidadLetra = "cinco";
+		case 5 -> unidadLetra = "Cinco";
 		
-		case 6 -> unidadLetra = "seis";
+		case 6 -> unidadLetra = "Seis";
 		
-		case 7 -> unidadLetra = "siete";
+		case 7 -> unidadLetra = "Siete";
 		
-		case 8 -> unidadLetra = "ocho";
+		case 8 -> unidadLetra = "Ocho";
 		
-		case 9 -> unidadLetra = "nueve";
+		case 9 -> unidadLetra = "Nueve";
 		
 		}
 		

@@ -38,7 +38,7 @@ public class Ejercicio2 {
 				
 				numeroDNI = 10000000;
 				System.out.println("Eror, ha introducido la letra de su DNI");
-				System.out.println("Se introducirá el número " + numeroDNI + " por defecto");
+				System.out.println("Se introducira el numero " + numeroDNI + " por defecto");
 				
 			}
 			
