@@ -5,16 +5,14 @@ import java.util.Scanner;
 
 /*
  * Valor introducido | Resultado esperado | Resultado obtenido 
- *  				 |  				  | 		
- * 				     |  				  |  		
- *   				 | 					  | 		
- *  				 |   		 		  |  		
- *   				 |   				  |  		
- *   				 |   				  |  		
+ *  	50 y 80		 |  		400		  | 		400
+ * 		80 y 50	     |  		2		  |  		2
+ *   	80 y 80		 | 			80		  | 		80
+ *  		a		 |   		2 		  |  		2  		
  * */
 
 public class Ejercicio5 {
-public static void main(String[] args) {
+	public static void main(String[] args) {
 		
 		int a = 0, b = 0, i, multiploA, multiploB, mcm = 0;
 		

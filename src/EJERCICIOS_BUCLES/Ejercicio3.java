@@ -10,7 +10,7 @@ import java.util.Scanner;
  *					 |		   * * *      |      * * *
  *					 |		  * * * * 	  |     * * * *  		
  * 			-1	     | Valor erroneo 	  | Valor erroneo 		
- *   		a		 | 1				  | *		
+ *   		a		 | 			1		  | 		*		
  * */
 
 public class Ejercicio3 {
@@ -22,7 +22,7 @@ public class Ejercicio3 {
 		
 		do {
 			
-			System.out.println("Introduzca un numero positivo, para crear una pirámide de esta altura y base: ");
+			System.out.println("Introduzca un numero positivo, para crear una pramide de esta altura y base: ");
 			
 			try {
 

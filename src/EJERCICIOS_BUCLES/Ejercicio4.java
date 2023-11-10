@@ -5,12 +5,10 @@ import java.util.Scanner;
 
 /*
  * Valor introducido | Resultado esperado | Resultado obtenido 
- *  				 |  				  | 		
- * 				     |  				  |  		
- *   				 | 					  | 		
- *  				 |   		 		  |  		
- *   				 |   				  |  		
- *   				 |   				  |  		
+ *  	50 y 80		 |  		10		  | 		10
+ * 		80 y 50	     |  		1		  |  		1
+ *   	80 y 80		 | 			80		  | 		80
+ *  		a		 |   		1 		  |  		1
  * */
 
 public class Ejercicio4 {
