@@ -8,7 +8,7 @@ import java.util.Scanner;
  *     123456789	 |  		9		  			   | 		9
  * 			0	     | Ha introducido un valor erroneo | Ha introducido un valor erroneo  		
  *   	   -1		 | Ha introducido un valor erroneo | Ha introducido un valor erroneo 		
- *  	   46		 | El número tiene 2 cifras  	   | El número tiene 2 cifras
+ *  	   46		 | 			2		 		  	   | 		2 
  * */
 
 public class Ejercicio9 {
