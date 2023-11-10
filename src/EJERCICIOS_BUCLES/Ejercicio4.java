@@ -57,7 +57,7 @@ public class Ejercicio4 {
 		
 		
 		
-		for (i = a - 1; i < a; i--) {
+		for (i = a; i < a + 1; i--) {
 			
 			if (a % i == 0 && b % i == 0) {
 				

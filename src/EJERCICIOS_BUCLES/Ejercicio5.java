@@ -57,7 +57,7 @@ public static void main(String[] args) {
 		
 		
 		
-		for (i = b + 1; i > b; i++) {
+		for (i = b; i > b - 1; i++) {
 			
 			multiploA = i % a;
 			
