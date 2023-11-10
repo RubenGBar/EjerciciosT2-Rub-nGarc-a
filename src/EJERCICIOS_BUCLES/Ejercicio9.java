@@ -4,19 +4,17 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /*
- * Valor introducido | Resultado esperado | Resultado obtenido 
- *  				 |  				  | 		
- * 				     |  				  |  		
- *   				 | 					  | 		
- *  				 |   		 		  |  		
- *   				 |   				  |  		
- *   				 |   				  |  		
+ * Valor introducido | Resultado esperado			   | Resultado obtenido 
+ *     123456789	 |  		9		  			   | 		9
+ * 			0	     | Ha introducido un valor erroneo | Ha introducido un valor erroneo  		
+ *   	   -1		 | Ha introducido un valor erroneo | Ha introducido un valor erroneo 		
+ *  	   46		 | El número tiene 2 cifras  	   | El número tiene 2 cifras
  * */
 
 public class Ejercicio9 {
 	public static void main(String[] args) {
 		
-		int numero, auxiliar, contador, ultimaCifra, numReves;
+		int numero, contador = 0;
 		
 		Scanner sc = new Scanner(System.in);
 		
@@ -36,19 +34,22 @@ public class Ejercicio9 {
 				
 			}
 			
-			if (numero < 0) System.out.println("Ha introducido un valor erroneo ");
+			if (numero < 1) System.out.println("Ha introducido un valor erroneo ");
 			
-		}while(numero < 0);
+		} while(numero < 1);
 		
 		
 		
-		auxiliar = numero;
 		
-		while(auxiliar > 0) {
+		while(numero > 0) {
 			
-			ultimaCifra = auxiliar % 10;
+			numero /= 10;
+			
+			contador++;
 			
 		}
+		
+		System.out.println("El número tiene " + contador + " cifras");
 		
 		sc.close();
 	}

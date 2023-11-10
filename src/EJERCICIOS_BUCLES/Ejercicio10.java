@@ -4,13 +4,11 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /*
- * Valor introducido | Resultado esperado | Resultado obtenido 
- *  				 |  				  | 		
- * 				     |  				  |  		
- *   				 | 					  | 		
- *  				 |   		 		  |  		
- *   				 |   				  |  		
- *   				 |   				  |  		
+ * Valor introducido | Resultado esperado      		   | Resultado obtenido 
+ *  	11211		 | El numero es capicua    		   | El numero es capicua 		
+ * 		  30	     | El numero no es capicua 		   | El numero no es capicua 		
+ *   	  -9		 | Ha introducido un valor erroneo | Ha introducido un valor erroneo
+ *   	  0          | El numero es capicua            | El numero es capicua
  * */
 
 public class Ejercicio10 {
@@ -22,7 +20,7 @@ public class Ejercicio10 {
 		
 		do {
 			
-			System.out.println("Introduzca un numero: ");
+			System.out.println("Introduzca un numero positivo: ");
 			
 			try {
 				
