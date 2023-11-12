@@ -3,51 +3,45 @@ package EJERCICIOS_CONDICIONALES;
 import java.util.Scanner;
 
 /*
- * Valor introducido es = 89 | Resultado esperado: El numero en letra es: Ochenta y nueve | Resultado obtenido: El numero en letra es: Ochenta y nueve
- * Valor introducido es = 100 | Resultado esperado: El valor introducido es incorrecto | Resultado obtenido: El valor introducido es incorrecto 
- * Valor introducido es = -1 | Resultado esperado: El valor introducido es incorrecto | Resultado obtenido: El valor introducido es incorrecto 
- * Valor introducido es = 5 | Resultado esperado: El numero en letras es: cinco | Resultado obtenido: El numero en letras es: cinco
- * Valor introducido es = 26 | Resultado esperado: El numero en letras es: Veintiseis | Resultado obtenido: El numero en letras es: Veintiseis
+ * Valor introducido | Resultado esperado | Resultado Obtenido
+ * 89				 | Ochenta y nueve	  | Ochenta y nueve		
+ * 100				 | Mensaje de error	  | Mensaje de error		
+ * -1				 | Mensaje de error	  | Mensaje de error
+ * 5				 | Cinco			  | Cinco		
+ * 26				 | Veintiseis		  | Veintiseis
  * */
 
 public class Ejercicio4 {
 	public static void main(String[] args) {
-		
-		int numero, unidad = 0, decena;
-		
-		String decenaLetra = "", concreto = "", unidadLetra = "";
-		
-		Scanner sc = new Scanner(System.in);
-		
-		
-		
-		do {
-		
-		System.out.println("Introduzca un numero: ");
-		
-		numero = sc.nextInt();
-		
-		if (numero < 0 || numero > 99) System.out.println("El valor introducido es incorrecto");
-		
-		} while (numero < 0 || numero > 99);
-		
-		
-		
-		
-		if (numero > 29) {
-		
-			unidad = numero%10;
-			
-		} else {
-			
-			unidad = numero;
-			
-		}
-		
-		decena = numero/10;
-		
-		
-		
+	    // Declaro las variables
+	    int numero, unidad = 0, decena;
+	    String decenaLetra = "", concreto = "", unidadLetra = "";
+
+	    // Creo el Scanner
+	    Scanner sc = new Scanner(System.in);
+
+	    // Solicito al usuario que introduzca un número entre 0 y 99
+	    do {
+	        System.out.println("Introduzca un numero: ");
+	        numero = sc.nextInt();
+
+	        // Verifico si el número está fuera del rango permitido
+	        if (numero < 0 || numero > 99) {
+	            System.out.println("El valor introducido es incorrecto");
+	        }
+
+	    } while (numero < 0 || numero > 99);
+
+	    // Descompongo el número en unidades y decenas
+	    if (numero > 29) {
+	        unidad = numero % 10;
+	    } else {
+	        unidad = numero;
+	    }
+	    decena = numero / 10;
+
+	    
+	    // Asigno las letras correspondientes a las unidades
 		switch (unidad) {
 		
 		case 0 -> unidadLetra = "Cero";
@@ -73,7 +67,7 @@ public class Ejercicio4 {
 		}
 		
 		
-		
+		// Asigno las letras correspondientes a unos números en concretos (del 10 al 29 y los multiplos de 10)
 		switch (numero) {
 		
 		case 10 -> concreto = "Diez";
@@ -132,6 +126,8 @@ public class Ejercicio4 {
 		
 		}
 		
+		
+		// Asigno las letras correspondientes a las decenas
 		switch (decena) {
 		
 		case 3 -> decenaLetra = "Treinta y ";
@@ -150,16 +146,19 @@ public class Ejercicio4 {
 		
 		}
 		
-		if (numero >= 0 && numero <= 9) {
-			System.out.println("El numero en letras es: " + unidadLetra);
-		}else if (numero >= 10 && numero <= 29 || numero == 20 || numero == 30 || numero == 40 
-				|| numero == 50 || numero == 60 || numero == 70 || numero == 80 || numero == 90) {
-			System.out.println("El numero en letras es: " + concreto);
-		} else if (numero >= 30 && numero <= 99) {
-			System.out.println("El numero en letra es: "  + decenaLetra + unidadLetra);
-		}
 		
-		sc.close();
+		// Imprimo el número en letras según su rango
+	    if (numero >= 0 && numero <= 9) {
+	        System.out.println("El numero en letras es: " + unidadLetra);
+	    } else if (numero >= 10 && numero <= 29 || numero == 20 || numero == 30 || numero == 40
+	            || numero == 50 || numero == 60 || numero == 70 || numero == 80 || numero == 90) {
+	        System.out.println("El numero en letras es: " + concreto);
+	    } else if (numero >= 30 && numero <= 99) {
+	        System.out.println("El numero en letra es: " + decenaLetra + unidadLetra);
+	    }
+
+	    // Cierro el Scanner
+	    sc.close();
 		
 	}
 
