@@ -14,6 +14,18 @@ import java.util.Scanner;
  * Valor introducido es = 52156544 | Resultado esperado: El valor introducido es erróneo. | Resultado obtenido: El valor introducido es erróneo.
  * */
 
+/*
+ * Valor introducido | Resultado esperado | Resultado Obtenido
+ * 					 | 					  | 		
+ * 					 | 					  | 		
+ * 					 | 					  | 		
+ * 					 | 					  | 		
+ * 					 | 					  | 		
+ * 					 | 					  | 		
+ * 					 | 					  | 		
+ * 					 | 					  | 		
+ * */
+
 public class Ejercicio1 {
 	public static void main(String[] args) {
 		

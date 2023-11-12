@@ -13,55 +13,55 @@ import java.util.Scanner;
 
 public class Ejercicio2 {
 	public static void main(String[] args) {
+	    // Declo las variables
+	    int numero = 0, i, j, contador = 0;
 
-		int numero = 0, i, j, contador = 0;
+	    boolean primo;
 
-		boolean primo;
+	    // Creo el Scanner
+	    Scanner sc = new Scanner(System.in);
 
-		Scanner sc = new Scanner(System.in);
+	    // Bucle do-while para asegurarse de que se ingrese un número positivo
+	    do {
+	        System.out.println("Introduzca un numero positivo: ");
 
-		do {
-			
-			System.out.println("Introduzca un numero positivo: ");
-			
-			try {
+	        try {
+	            // Leo el valor de numero del teclado
+	            numero = sc.nextInt();
+	        } catch (InputMismatchException e) {
+	            // Si se produce una excepción, se establece el número en 1 y se muestra un mensaje de error
+	            numero = 1;
+	            System.out.println("Ha introducido un valor erroneo. Se introducira 1 como valor predeterminado");
+	        }
 
-				numero = sc.nextInt();
+	        // Si el número ingresado es menor que 1, muestra un mensaje de error
+	        if (numero < 1)
+	            System.out.println("Valor erroneo");
 
-			} catch (InputMismatchException e) {
+	    } while (numero < 1);
 
-				numero = 1;
+	    // Bucle for para encontrar los números primos en el rango de 1 a numero
+	    for (i = 2; i <= numero; i++) {
+	        primo = true;
 
-				System.out.println("Ha introducido un valor erroneo. Se introducira 1 como valor predeterminado");
+	        // Bucle for para verificar si i es primo
+	        for (j = 2; j < i; j++) {
+	            if (i % j == 0) {
+	                primo = false;
+	                break;
+	            }
+	        }
 
-			}
-			
-			if (numero < 1) System.out.println("Valor erroneo");;
-			
-		} while (numero < 1);
+	        // Si i es primo, incrementa el contador
+	        if (primo)
+	            contador++;
+	    }
 
-		for (i = 2; i <= numero; i++) {
+	    // Muestra la cantidad de números primos en el rango de 1 a numero
+	    System.out.println("Entre 1 y " + numero + " hay " + contador + " numero/s primo/s");
 
-			primo = true;
-
-			for (j = 2; j < i; j++) {
-				
-				if (i % j == 0) {
-					primo = false;
-					break;
-				}
-				
-			}
-
-			if (primo)
-				
-				contador++;
-
-		}
-
-		System.out.println("Entre 1 y " + numero + " hay " + contador + " numero/s primo/s");
-
-		sc.close();
+	    // Cierro el Scanner
+	    sc.close();
 
 	}
 
